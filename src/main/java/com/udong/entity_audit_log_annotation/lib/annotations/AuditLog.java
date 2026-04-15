@@ -5,5 +5,8 @@ import java.lang.annotation.*;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AuditLog {
+    /**
+     * Default is AuditLogEntity
+     */
     String savedToTable() default "audit_log";
 }
