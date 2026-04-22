@@ -3,6 +3,7 @@ CREATE TABLE employee (
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     department VARCHAR(255),
+    salary VARCHAR(255) NOT NULL,
     created_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -15,12 +16,14 @@ CREATE TABLE employee_address (
     zip_code VARCHAR(20),
     country VARCHAR(100),
     created_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (employee_id) REFERENCES employee(id)
+    FOREIGN KEY (employee_id) REFERENCES employee(id) ON DELETE CASCADE
 );
 
 CREATE TABLE audit_log (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     table_name VARCHAR(255) NOT NULL,
-    operator VARCHAR(50) NOT NULL,
+    operation VARCHAR(50) NOT NULL,
+    old_data VARCHAR,
+    new_data VARCHAR,
     created_date TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );

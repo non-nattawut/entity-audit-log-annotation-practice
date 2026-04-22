@@ -1,9 +1,9 @@
 -- Seed data for employee table
-INSERT INTO employee (id, name, email, department) VALUES (1, 'John Doe', 'john.doe@example.com', 'ENGINEERING');
-INSERT INTO employee (id, name, email, department) VALUES (2, 'Jane Smith', 'jane.smith@example.com', 'MARKETING');
-INSERT INTO employee (id, name, email, department) VALUES (3, 'Michael Brown', 'michael.brown@example.com', 'HUMAN_RESOURCES');
-INSERT INTO employee (id, name, email, department) VALUES (4, 'Emily Davis', 'emily.davis@example.com', 'SALES');
-INSERT INTO employee (id, name, email, department) VALUES (5, 'Chris Wilson', 'chris.wilson@example.com', 'ENGINEERING');
+INSERT INTO employee (name, email, department, salary) VALUES ('John Doe', 'john.doe@example.com', 'ENGINEERING', '90000');
+INSERT INTO employee (name, email, department, salary) VALUES ('Jane Smith', 'jane.smith@example.com', 'MARKETING', '50000');
+INSERT INTO employee (name, email, department, salary) VALUES ('Michael Brown', 'michael.brown@example.com', 'HUMAN_RESOURCES', '3');
+INSERT INTO employee (name, email, department, salary) VALUES ('Emily Davis', 'emily.davis@example.com', 'SALES', '67');
+INSERT INTO employee (name, email, department, salary) VALUES ('Chris Wilson', 'chris.wilson@example.com', 'ENGINEERING', '696969');
 
 -- Seed data for employee_address table
 INSERT INTO employee_address (employee_id, street, city, state, zip_code, country)

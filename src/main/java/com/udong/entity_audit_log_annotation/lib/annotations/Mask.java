@@ -9,4 +9,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Mask {
     String maskWith() default "*";
+    int min() default 5;
+    int max() default 10;
 }
